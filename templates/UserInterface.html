@@ -1,0 +1,108 @@
+<form action = "http://localhost:5000/result" method = "POST">
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Whiz AI</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<body>
+		<div class="container">
+
+			<br>
+			<br>
+
+			<!--<div class="input-file">
+				<label for="formFile" class="form-label">Default file input example</label>
+				<input class="form-control" type="file"  name="filecsv" id="formFile">
+			</div>-->
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-2">
+						<input type="text" class="form-control" placeholder="Dataset Link" name="Dataset Link" style="background-color:#f5c6a6">
+				</div>
+			</div>	
+			<br><br>
+
+			<label for="Algorithm Name">Choose a clustering algorithm:</label>
+			<select name="Algorithm Name" id="Algorithm Name">
+			<option value="DBSCAN">DBSCAN</option>
+		
+			<option value="OPTICS">OPTICS</option>
+		
+			<option value="GMM">Gaussian Mixture Model</option>
+		
+			<option value="HRCL">Hierarchical</option>
+		
+			<option value="CTRD">Centroid</option>
+			</select>
+
+			<br><br><br>
+
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-2">
+					<input type="text" class="form-control" placeholder="Cluster Factor 1" name="Cluster Factor 1" style="background-color:#fae4a7">
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-2">
+					<input type="text" class="form-control" placeholder="Cluster Factor 2" name="Cluster Factor 2" style="background-color:#fae4a7">
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-2">
+					<input type="text" class="form-control" placeholder="Cluster Factor 3" name="Cluster Factor 3" style="background-color:#fae4a7">
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-2">
+					<input type="text" class="form-control" placeholder="Hover Factor 1" name="Hover Factor 1" style="background-color:#cdc3fa">
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-2">
+					<input type="text" class="form-control" placeholder="Hover Factor 2" name="Hover Factor 2" style="background-color:#cdc3fa">
+			</div>
+		</div>
+
+			<br><br><br>
+			<p>For DBSCAN, enter the following Hyperparameters: <b>eps distance, minimum samples</b></p>
+			<p>For OPTICS, enter the following Hyperparameters: <b>minimum eps distance, maximum eps distance, minimum samples</b></p>
+			<p>For Gaussian Mixture Models, Hierarchical, and Centroid-based enter the following Hyperparameters: <b>number of clusters</b></p>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-2">
+						<input type="text" class="form-control" placeholder="Hyper Parameter 1" name="Hyper Parameter 1"style="background-color:#c7fff2">
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-2">
+						<input type="text" class="form-control" placeholder="Hyper Parameter 2" name="Hyper Parameter 2"style="background-color:#c7fff2">
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-2">
+						<input type="text" class="form-control" placeholder="Hyper Parameter 3" name="Hyper Parameter 3"style="background-color:#c7fff2">
+				</div>
+			</div>
+
+			<br><br>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-2">
+						<input class="btn btn-light" type="submit" name="Execute" value="Run Clustering Algorithm" style="background-color:#2a8ff5">
+				</div>		    
+			</div>
+			<!--<button type="button" class="btn btn-secondary">Cluster Analysis</button> -->
+
+			<br>
+
+			<br>
+
+			<!-- <button type="button" class="btn btn-primary">Run Model</button> -->
+			
+		</div>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+	</body>
+	</html>
+</form>
